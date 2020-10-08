@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFrameworks>net472;netcoreapp2.1;netcoreapp3.1</TargetFrameworks>
+        <TargetFrameworks>net472;netcoreapp2.1;netcoreapp3.1;net5.0</TargetFrameworks>
         <AssemblyName>Dalion.HttpMessageSigning.Signing.Tests</AssemblyName>
         <RootNamespace>Dalion.HttpMessageSigning.Signing</RootNamespace>
         <IsPackable>false</IsPackable>
@@ -29,6 +29,9 @@
     </PropertyGroup>
     <PropertyGroup Condition="'$(TargetFramework)'=='netcoreapp3.1'">
         <DefineConstants>NETCORE;NETSTANDARD;NETCOREAPP3_1</DefineConstants>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(TargetFramework)'=='net5.0'">
+        <DefineConstants>NETCORE;NETSTANDARD;NET5_0</DefineConstants>
     </PropertyGroup>
 
     <ItemGroup>
